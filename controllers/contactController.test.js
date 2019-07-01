@@ -11,7 +11,12 @@ describe('index', () => {
   })
   it('test obtener todos los registros', async () => {
     req = { body: {} };
-    res = { json: jest.fn() };
+    res = {
+      data: null,
+      json(payload) {
+        this.data = JSON.stringify(payload)
+      }
+    };
 
     await contactController.index(req, res);
   });

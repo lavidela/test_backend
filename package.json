@@ -27,7 +27,7 @@
     "mongoose": "^5.1.7"
   },
   "jest": {
-    "testRegex": ".*-test.js$",
+    "testRegex": ".*.test.js$",
     "testEnvironment": "node",
     "automock": false
   }
