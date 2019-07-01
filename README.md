@@ -21,6 +21,7 @@ Ejecutar
 ```bash
 npm test
 ```
+
 La `api` contiene los siguientes metodos para ejecución
 
 * GET `/api/contacts`
@@ -29,4 +30,3 @@ La `api` contiene los siguientes metodos para ejecución
 * PUT `/api/contacts/:id`
 * PATCH `/api/contacts/:id`
 * DELETE `/api/contacts/:id`
-
