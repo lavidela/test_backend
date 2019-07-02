@@ -1,7 +1,9 @@
-var mongoose = require('mongoose');
+/* istanbul ignore file */
+
+const mongoose = require('mongoose');
 
 // declaracion de esquema
-var contactSchema = mongoose.Schema({
+const contactSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -17,6 +19,6 @@ var contactSchema = mongoose.Schema({
         default: Date.now
     }
 });
-
+const Contact = mongoose.model('contact', contactSchema);
 // exportar el modelo de contacto
-var Contact = module.exports = mongoose.model('contact', contactSchema);
+module.exports = { Contact };

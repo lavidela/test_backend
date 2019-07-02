@@ -21,6 +21,8 @@ Ejecutar
 ```bash
 npm test
 ```
+Se incluye postman para pruebas.
+`pruebas.postman_collection.json`
 
 La `api` contiene los siguientes metodos para ejecución
 

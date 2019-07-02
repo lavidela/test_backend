@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 // obtener variables de entorno
 const dotenv = require('dotenv');
 dotenv.config();
@@ -11,7 +12,7 @@ let mongoose = require('mongoose');
 let app = express();
 
 // importar rutas
-let apiRoutes = require("./routes/api-routes")
+const apiRoutes = require("./routes/api-routes")
 
 
 // configurar bodyparser para solicitudes posts

@@ -1,5 +1,9 @@
+/* istanbul ignore file */
 // Inicializar express router
-let router = require('express').Router();
+const router = require('express').Router();
+
+// importa el controller de contactos
+const { listContact, newContact, viewContact, updateContact, deleteContact } = require('../controllers/contactController');
 
 // Setea por defecto la respuesta del API
 router.get('/', function (req, res) {
@@ -9,19 +13,17 @@ router.get('/', function (req, res) {
     });
 });
 
-// importa el controller de contactos
-var contactController = require('../controllers/contactController');
 
 // Router de contactos
 router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
+    .get(listContact)
+    .post(newContact);
 
 router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
+    .get(viewContact)
+    .patch(updateContact)
+    .put(updateContact)
+    .delete(deleteContact);
 
 // Exporta la rutas
 module.exports = router;
