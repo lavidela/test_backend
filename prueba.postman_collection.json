@@ -1,0 +1,106 @@
+{
+	"variables": [],
+	"info": {
+		"name": "prueba",
+		"_postman_id": "9b247fda-f6f0-30e2-aec6-8fe7d0844442",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test api",
+			"request": {
+				"url": "http://localhost:3000/api",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "test app",
+			"request": {
+				"url": "http://localhost:3000/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get all contacts",
+			"request": {
+				"url": "http://localhost:3000/api/contacts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "insert contacts",
+			"request": {
+				"url": "http://localhost:3000/api/contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"compadrito\",\"gender\":\"M\",\"email\":\"andata@ccc.cl\",\"phone\":\"9999\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "view contact",
+			"request": {
+				"url": "http://localhost:3000/api/contacts/5d193cb8e443c23786a5fd74",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update contacts",
+			"request": {
+				"url": "http://localhost:3000/api/contacts/5d193cb9e443c23786a5fd75",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"juan\",\"gender\":\"M\",\"email\":\"juan@perez.cl\",\"phone\":\"312321312\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete contact",
+			"request": {
+				"url": "http://localhost:3000/api/contacts/5d1acff5b65eae37ab39b6ac",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
